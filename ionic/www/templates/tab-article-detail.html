@@ -1,0 +1,15 @@
+<ion-view view-title="文章详情">
+    <ion-content class="padding">
+        <h3 class="text-center">{{ data.title }}</h3>
+        <p>
+            <span class="padding">作者：{{ data.author }}</span>
+            <span class="padding">时间：{{ data.create_time }}</span>
+            <i class="icon paddings" ng-class="{true: 'ion-ios-star', false: 'ion-ios-star-outline'}[data.attention == 1]" ng-click="favourite(data.id)"></i>
+        </p>
+        <div>
+            <article ng-bind-html="data.content">
+                
+            </article>
+        </div>
+    </ion-content>
+</ion-view>

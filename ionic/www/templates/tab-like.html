@@ -1,0 +1,9 @@
+<ion-view>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="item in list">
+                <p ng-click="goToArticleDetail(item.article_id)">{{ item.title }}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

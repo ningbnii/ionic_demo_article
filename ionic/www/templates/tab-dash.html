@@ -1,0 +1,16 @@
+<ion-view view-title="Dashboard">
+    <ion-content class="padding articles">
+        <div>
+            <div class="box" ng-click="goToArticleDetail(item.id)" ng-repeat="item in list">
+                <div class="img">
+                    <img ng-src="{{item.thumb}}">
+                </div>
+                <div class="text item">
+                    <h2>{{item.title}}</h2>
+                    <p>{{ item.introduction }}</p>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="hasMoreData"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>
